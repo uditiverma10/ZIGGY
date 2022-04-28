@@ -1,0 +1,34 @@
+//You are given two float numbers, convert it into integer type and print the differnce between the sum of their first n natural numbers of the two integer.Also for the greater integer print whether it is odd or even.
+ 
+ 
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    float a,b;
+    printf("Enter two float numbers: ");
+    scanf("%f %f",&a,&b);
+    int x=a,y=b;
+    int s1=x*(x+1)/2;
+    int s2=y*(y+1)/2;
+    int diff,n;
+    if(s1>=s2){
+        diff=s1-s2;
+        n=x;
+    }else{
+        diff=s2-s1;
+        n=b;
+    }
+    
+    printf("%d is the difference of natural numbers of the given two floats.\n",diff);
+    
+    char str_ev[50]="even",str_od[50]="odd";
+    
+    if(n%2==0){
+        printf("Also,the greater number when converted to int is %d which is %s.",n,str_ev);
+    }else{
+         printf("Also,the greater number when converted to int is %d which is %s.",n,str_od);
+    }
+    
+    return 0;
+}
